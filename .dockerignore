@@ -1,0 +1,21 @@
+# Keep the build context to what the image needs: pyproject.toml, uv.lock,
+# README.md (referenced by pyproject metadata), and src/.
+.git/
+.github/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+tests/
+.env*
+Dockerfile
+docker-compose.yml
+.dockerignore
+.gitignore
+LICENSE
+CLAUDE.md
+AGENTS.md
