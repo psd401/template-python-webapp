@@ -8,4 +8,3 @@ on:
 jobs:
   psd-ci:
     uses: PSD401/.github/.github/workflows/reusable-psd-ci.yml@main
-    secrets: inherit
