@@ -24,6 +24,7 @@ docker build -t psd-webapp .          # production image
 - `docker-compose.yml` is for local dev only (source mount, `--reload`); production is the `Dockerfile` image.
 - New routes: typed pydantic request/response models; constraints on `Field` at the edge, not `if` checks inside handlers.
 - New settings: typed field on `Settings` + entry in `.env.example`, same PR. No `os.environ` outside `config.py`.
+- One test file per module in `tests/`.
 - Tests go through the TestClient with exact expected values; validation-error tests assert status 422 plus `loc`/`type`.
 - Tests construct explicit `Settings` — never depend on the developer's `.env` or the `get_settings()` cache.
 - Test-first for non-trivial logic; watch the test fail before making it pass. Existing tests are contracts: weakening or deleting an assertion must be declared in the PR body.
